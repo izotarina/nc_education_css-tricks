@@ -9,7 +9,8 @@ const gulp = require('gulp'),
     less = require('gulp-less'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
-    rename = require('gulp-rename')
+    rename = require('gulp-rename'),
+    replace = require('gulp-replace')
 
 gulp.task('svgstore', function () {
     const svgs = gulp
@@ -44,6 +45,7 @@ gulp.task('svgstore', function () {
 gulp.task('less', function () {
     return src('./src/assets/styles/main.less')
         .pipe(less())
+        .pipe(replace(`url('../../`, `url('src/`))
         .pipe(
             autoprefixer({
                 cascade: false,

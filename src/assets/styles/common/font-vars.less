@@ -1,21 +1,30 @@
 // задаем основные параметры шрифта в виде миксинов и переменных
 
-@font-family: NotoSans, sans-serif;
-@font-normal-size: 14px;
+@font-family-title: "Gotham Narrow";
+@font-family-text: "Sentinel";
+@font-size-base: 16px;
 
 .font-base() {
-  font-family: @font-family;
-  font-weight: 400;
+  font-family: @font-family-text;
+  font-weight: 500;
   font-style: normal;
-  font-size: @font-normal-size;
+  font-size: @font-size-base;
 }
 
-.font-light() {
-  .font-base();
-  font-weight: 300;
+.font-title() {
+    font-family: @font-family-title;
+    font-weight: 500;
+    font-style: normal;
 }
 
-.font-bold() {
-  .font-base();
-  font-weight: 600;
+.font-title-bold() {
+    font-family: @font-family-title;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-title-black() {
+    font-family: @font-family-title;
+    font-weight: 900;
+    font-style: normal;
 }
