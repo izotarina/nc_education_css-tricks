@@ -1,0 +1,12 @@
+.articles-and-sidebar {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 300px;
+    gap: @gap;
+    .container();
+
+    &__articles {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: @gap;
+    }
+}
