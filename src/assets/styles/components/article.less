@@ -1,0 +1,120 @@
+.article {
+    background-color: @color-background-article;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,.24));
+    overflow: hidden;
+
+    &__content {
+        position: relative;
+        z-index: 4;
+
+        & > * {
+            margin-bottom: 1.5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        & a {
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+    
+    &__title {
+        display: block;
+
+        .font-title-black();
+        font-size: 2.5rem;
+        line-height: 1.1;
+        color: @color-title-article;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.4rem 1.5rem;
+
+        background-color: @color-background-direct-link;
+        border-right: 1px solid #262626;
+        border-bottom: 1px solid #262626;
+        border-radius: 4px;
+        box-shadow: inset 1px 1px 0 #777,0 2px 3px rgba(0,0,0,.4);
+
+        &-text {
+            margin-right: 1rem;
+
+            line-height: 1.4;
+            color: white;
+            .font-base();
+            font-weight: bold;
+            letter-spacing: .1rem;
+        }
+
+        &-icon {
+            width: 10px;
+            height: 18px;
+
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__text {
+        .font-base();
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: @color-text;
+        line-height: 1.6;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+
+        &-img {
+            width: 40px;
+            height: 40px;
+            margin-right: 0.5rem;
+            border-radius: 50%;
+        }
+
+        &-text {
+            .font-base();
+            color: @color-author-text;
+            letter-spacing: 0.05rem;
+        }
+
+        &-link {
+            color: black;
+            .font-base-bold();
+        }
+    }
+
+    &._big &__block-img {
+        position: relative;
+    }
+
+    &._big {
+        .container();
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        position: relative;
+        z-index: 2;
+
+        .article__img {
+            display: block;
+            object-fit: cover;
+            position: absolute;
+            max-width: none;
+            width: 120%;
+            height: 100%;
+        }
+
+        .article__content {
+            padding: 3rem;
+        }
+    }
+}

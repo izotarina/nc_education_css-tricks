@@ -66,7 +66,9 @@ gulp.task('js', function () {
 })
 
 gulp.task('html', function () {
-    return gulp.src('./src/index.html').pipe(gulp.dest('./dist'))
+    return gulp.src('./src/index.html')
+        .pipe(replace(`src/assets`, `src`))
+        .pipe(gulp.dest('./dist'))
 })
 
 gulp.task('fonts', function () {
