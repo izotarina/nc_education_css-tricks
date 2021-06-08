@@ -1,0 +1,30 @@
+.author {
+    display: flex;
+    align-items: center;
+
+    line-height: 1.3;
+    font-size: 1.1rem;
+
+    &__img {
+        width: 40px;
+        height: 40px;
+        margin-right: 0.5rem;
+        border-radius: 50%;
+    }
+
+    &__name {
+        .font-base();
+        color: @color-author-text;
+        letter-spacing: 0.05rem;
+
+        &._white {
+            color: white;
+            .font-base-bold();
+        }
+    }
+
+    &__link {
+        color: black;
+        .font-base-bold();
+    }
+}
