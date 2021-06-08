@@ -2,20 +2,24 @@
 
 @font-family-title: "Gotham Narrow";
 @font-family-text: "Sentinel";
-@font-size-base: 16px;
+@font-family-code: 'Operator';
 
 .font-base() {
-  font-family: @font-family-text;
-  font-weight: 500;
-  font-style: normal;
-  font-size: @font-size-base;
+    font-family: @font-family-text;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.font-base-italic() {
+    font-family: @font-family-text;
+    font-weight: 500;
+    font-style: italic;
 }
 
 .font-base-bold() {
     font-family: @font-family-text;
     font-weight: 700;
     font-style: normal;
-    font-size: @font-size-base;
   }
 
 .font-title() {
@@ -33,5 +37,11 @@
 .font-title-black() {
     font-family: @font-family-title;
     font-weight: 900;
+    font-style: normal;
+}
+
+.font-code {
+    font-family: @font-family-code;
+    font-weight: 400;
     font-style: normal;
 }
