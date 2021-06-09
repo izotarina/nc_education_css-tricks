@@ -8,5 +8,25 @@
         display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: @gap;
+
+        &-button {
+            grid-column-start: 1;
+            grid-column-end: 4;
+
+            padding: 1rem 1.5rem;
+
+            background-color: @color-background-direct-link;
+            border: 0;
+            border-bottom: 1px solid #262626;
+            border-right: 1px solid #262626;
+            box-shadow: inset 1px 1px 0 #777, 0 2px 3px rgba(0, 0, 0, 0.4);
+            border-radius: 4px;
+
+            .font-base-bold();
+            font-size: 1.2rem;
+            line-height: 1.2;
+            color: white;
+            letter-spacing: 1px;
+        }
     }
 }
