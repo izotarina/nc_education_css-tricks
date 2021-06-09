@@ -5,7 +5,7 @@
     padding: 0 @gap;
 
     position: relative;
-    z-index: 2;
+    z-index: 5;
 
     background-color: rgba(0, 0, 0, 0.25);
     box-shadow: inset 0 -2px 5px rgba(0,0,0,.33);
@@ -54,6 +54,9 @@
     &__search-and-account {
         display: flex;
         gap: 0.5rem;
+        position: fixed;
+        z-index: 5;
+        right: @gap * 1.4;
     }
 
     &__search,
@@ -65,6 +68,7 @@
             width: 2.2rem;
             height: 2.2rem;
             fill: white;
+            filter: drop-shadow(0 2px 5px rgba(0,0,0,.3));
         }
 
         &:hover {
