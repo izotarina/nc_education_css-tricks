@@ -5,6 +5,10 @@
 
     background-color: @color-background-footer;
 
+    @media (max-width: 800px) {
+        margin-top: 20rem;
+    }
+
     &__star {
         position: absolute;
         fill: #af002d;
@@ -13,12 +17,17 @@
         z-index: -1;
         top: -90px;
         left: var(--gap);
+
+        @media (max-width: 830px) {
+            top: -130px;
+            left: auto;
+            right: 40px;
+        }
     }
 
     &__inner {
         .container();
         position: relative;
-        z-index: 5;
     }
 
     &__header {
@@ -27,9 +36,14 @@
         gap: var(--gap);
         align-items: end;
         position: relative;
-        z-index: 2;
+
+        @media (max-width: 830px) {
+            grid-template-columns: 1fr;
+        }
 
         &-title {
+            margin-top: 2rem;
+
             .font-base();
             font-size: 2rem;
             color: white;
@@ -47,24 +61,30 @@
     }
 
     &__form {
-        padding: 1rem 1.5rem;
-        margin-top: -3.2rem;
+        padding: 1.5rem;
+        margin-top: -3rem;
         position: relative;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
+        position: relative;
 
         background-color: @color-background-form;
 
         line-height: 1.4;
 
+        @media (max-width: 830px) {
+            order: -1;
+        }
+
         &::after {
             content: "";
             position: absolute;
-            z-index: 0;
+            z-index: -1;
             top: 0;
             right: 100%;
             width: 20px;
             height: 48px;
+
             background: #909090;
             clip-path: polygon(100% 0,100% 100%,0 100%);
         }
@@ -110,8 +130,17 @@
 
     &__links {
         display: grid;
-        grid-template-columns: repeat(4, 25%);
-        margin-top: var(--gap);
+        grid-template-columns: repeat(4, 1fr);
+        padding-top: 3rem;
+        gap: 1.5rem;
+
+        @media (max-width: 950px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 380px) {
+            grid-template-columns: 1fr;
+        }
 
         &-block {
             & ~ & {
