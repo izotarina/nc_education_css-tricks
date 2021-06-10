@@ -1,6 +1,6 @@
 .footer-main {
     display: block;
-    padding-bottom: @gap;
+    padding-bottom: var(--gap);
     position: relative;
 
     background-color: @color-background-footer;
@@ -12,7 +12,7 @@
         height: 120px;
         z-index: -1;
         top: -90px;
-        left: @gap;
+        left: var(--gap);
     }
 
     &__inner {
@@ -24,7 +24,7 @@
     &__header {
         display: grid;
         grid-template-columns: 42% 1fr;
-        gap: @gap;
+        gap: var(--gap);
         align-items: end;
         position: relative;
         z-index: 2;
@@ -111,7 +111,7 @@
     &__links {
         display: grid;
         grid-template-columns: repeat(4, 25%);
-        margin-top: @gap;
+        margin-top: var(--gap);
 
         &-block {
             & ~ & {

@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 0 @gap;
+    padding: 0 var(--gap);
 
     position: relative;
     z-index: 5;
@@ -30,7 +30,7 @@
         &-text {
             width: 11.3rem;
             height: 1.65rem;
-            margin-right: @gap;
+            margin-right: var(--gap);
 
             fill: white;
             filter: drop-shadow(0 2px 1px rgba(0,0,0,.3));
@@ -78,11 +78,11 @@
         gap: 0.5rem;
         position: fixed;
         z-index: 5;
-        right: @gap * 1.4;
+        right: calc(var(--gap) * 1.4);
         top: 10px;
 
         @media (max-width: 1200px) {
-            right: @gap;
+            right: var(--gap);
         }
 
         @media (max-width: 600px) {

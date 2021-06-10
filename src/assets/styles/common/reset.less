@@ -1,4 +1,15 @@
 // иногда common.less, иногда internal-normalize - для изменения (сброса) дефолтный стилей html элементов
+:root {
+    --gap: 3rem;
+
+    @media (max-width: 1200px){
+        --gap: 2rem;
+    }
+
+    @media (max-width: 800px){
+        --gap: 1rem;
+    }
+}
 
 *,
 *::after,

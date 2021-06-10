@@ -1,12 +1,12 @@
 .articles-and-sidebar {
     display: grid;
     grid-template-columns: minmax(0,1fr) 300px;
-    gap: @gap;
+    gap: var(--gap);
 
     &__articles {
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        gap: @gap;
+        gap: var(--gap);
 
         &-button {
             grid-column-start: 1;
