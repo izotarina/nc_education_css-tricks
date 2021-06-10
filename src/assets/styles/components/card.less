@@ -16,12 +16,20 @@
         min-width: 220px;
     }
 
+    @media (max-width: 800px) {
+        min-width: 190px;
+    }
+
     &:not(:first-child) {
         margin-left: -130px;
         box-shadow: -3rem 0 3rem -2rem #000;
 
         @media (max-width: 1200px) {
             margin-left: -30px;
+        }
+
+        @media (max-width: 800px) {
+            margin-left: -10px;
         }
     }
 
@@ -38,6 +46,10 @@
             @media (max-width: 1200px) {
                 transform: translateX(30px);
             }
+
+            @media (max-width: 800px) {
+                transform: translateX(10px);
+            }
         }
     }
 
@@ -46,11 +58,10 @@
     }
 
     &__text {
-        display: flex;
-        align-items: center;
         .font-base();
         color: @color-card-time;
         font-size: 1.15rem;
+        line-height: 1.5;
 
         & strong {
             color: @color-card-article;
