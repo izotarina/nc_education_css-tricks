@@ -12,13 +12,19 @@
         border-radius: 5px;
         background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
         box-shadow: -10px 0 20px 3px #000;
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
     }
 
+    &::-webkit-scrollbar,
     ::-webkit-scrollbar {
         width: 10px;
         height: 10px;
     }
 
+    &::-webkit-scrollbar-track,
     ::-webkit-scrollbar-track {
         background: none;
     }
@@ -92,5 +98,9 @@
         overflow-x: scroll;
         position: relative;
         padding: 3rem 0 3rem 2rem;
+
+        @media (max-width: 1200px) {
+            overflow-x: visible;
+        }
     }
 }
