@@ -1,6 +1,8 @@
 .article {
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 2;
 
     background-color: @color-background-article;
     border-radius: 0.5rem;
@@ -135,12 +137,8 @@
     }
 
     &._big {
-        .container();
         display: grid;
         grid-template-columns: 50% 50%;
-
-        position: relative;
-        z-index: 2;
 
         .article__block-img {
             &::after {
@@ -150,6 +148,7 @@
 
         .article__img {
             position: absolute;
+            object-position: 80% 50%;
             max-width: none;
             width: 120%;
             height: 100%;
