@@ -1,0 +1,20 @@
+.header-bar {
+    display: flex;
+    gap: 0.5rem;
+
+    &__item {
+        width: 32px;
+        height: 32px;
+    }
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+        fill: white;
+        filter: drop-shadow(0 2px 5px rgba(0,0,0,.3));
+
+        &:hover {
+            opacity: @opacity-hover;
+        }
+    }
+}
