@@ -21,8 +21,9 @@
     }
 
     &__sidebar {
-        &._showing {
-            opacity: 1;
+        &-block {
+            position: sticky;
+            top: var(--gap);
         }
 
         @media (max-width: 800px) {
