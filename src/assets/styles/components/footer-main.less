@@ -52,11 +52,7 @@
         }
 
         &-link {
-            color: @color-link;
-
-            &:hover {
-                opacity: 0.7;
-            }
+            .link();
         }
     }
 
@@ -166,6 +162,8 @@
         &-name {
             position: relative;
             transition: 0.1s;
+
+            .default-opacity();
 
             &::after {
                 content: "";

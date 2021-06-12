@@ -9,7 +9,7 @@
 
     &::after {
         content: "";
-        background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
+        background: @gradient-main;
         position: absolute;
         top: -5px;
         left: -5px;
@@ -66,11 +66,7 @@
         }
 
         &-link {
-            color: @color-link;
-
-            &:hover {
-                opacity: 0.7;
-            }
+            .link();
         }
     }
 }

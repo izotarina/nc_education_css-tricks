@@ -23,12 +23,6 @@
                 margin-bottom: 0;
             }
         }
-
-        & a {
-            &:hover {
-                opacity: 0.7;
-            }
-        }
     }
 
     &__tags {
@@ -82,7 +76,7 @@
         line-height: 1.5;
 
         &-link {
-            color: @color-link;
+            .link();
         }
 
         &-code {
@@ -110,6 +104,8 @@
     &__block-img {
         position: relative;
 
+        .default-opacity();
+
         &::after {
             content: "";
             display: block;
@@ -123,7 +119,7 @@
             object-fit: cover;
             pointer-events: none;
             
-            background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
+            background: @gradient-main;
             mix-blend-mode: screen;
             border-radius: 0.5rem;
 
